@@ -79,7 +79,6 @@
 		A301B6452430A99F0033806E = {
 			isa = PBXGroup;
 			children = (
-				A301B6812430A9F60033806E /* PhotosViewController.swift */,
 				A301B6502430A99F0033806E /* Photorama */,
 				A301B6672430A9A00033806E /* PhotoramaTests */,
 				A301B6722430A9A00033806E /* PhotoramaUITests */,
@@ -100,6 +99,7 @@
 		A301B6502430A99F0033806E /* Photorama */ = {
 			isa = PBXGroup;
 			children = (
+				A301B6832430ACE00033806E /* View */,
 				A301B6512430A99F0033806E /* AppDelegate.swift */,
 				A301B6532430A99F0033806E /* SceneDelegate.swift */,
 				A301B6572430A99F0033806E /* Main.storyboard */,
@@ -126,6 +126,14 @@
 				A301B6752430A9A00033806E /* Info.plist */,
 			);
 			path = PhotoramaUITests;
+			sourceTree = "<group>";
+		};
+		A301B6832430ACE00033806E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A301B6812430A9F60033806E /* PhotosViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
