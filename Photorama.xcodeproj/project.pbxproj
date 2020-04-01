@@ -19,6 +19,7 @@
 		A301B6892430DC920033806E /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A301B6882430DC920033806E /* PhotoStore.swift */; };
 		A301B68B243115870033806E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A301B68A243115870033806E /* Photo.swift */; };
 		A33878C22434A2E500DEFBB9 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33878C12434A2E500DEFBB9 /* PhotoCollectionViewCell.swift */; };
+		A33878C42434E18700DEFBB9 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33878C32434E18700DEFBB9 /* PhotoInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A301B6882430DC920033806E /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		A301B68A243115870033806E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		A33878C12434A2E500DEFBB9 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		A33878C32434E18700DEFBB9 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				A301B6812430A9F60033806E /* PhotosViewController.swift */,
+				A33878C32434E18700DEFBB9 /* PhotoInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				A301B6822430A9F60033806E /* PhotosViewController.swift in Sources */,
 				A301B6522430A99F0033806E /* AppDelegate.swift in Sources */,
 				A33878C22434A2E500DEFBB9 /* PhotoCollectionViewCell.swift in Sources */,
+				A33878C42434E18700DEFBB9 /* PhotoInfoViewController.swift in Sources */,
 				A301B6542430A99F0033806E /* SceneDelegate.swift in Sources */,
 				A301B6852430C5F00033806E /* FlickrAPI.swift in Sources */,
 			);

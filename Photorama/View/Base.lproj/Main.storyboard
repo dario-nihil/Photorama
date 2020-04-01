@@ -64,6 +64,7 @@
                                         <connections>
                                             <outlet property="imageView" destination="ycv-iu-HcZ" id="OuH-kH-YQG"/>
                                             <outlet property="spinner" destination="sLj-bo-Ifg" id="09N-AD-CUP"/>
+                                            <segue destination="G6M-bG-vNP" kind="show" identifier="showPhoto" id="LvZ-Dc-ZAb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -92,6 +93,36 @@
             </objects>
             <point key="canvasLocation" x="813.33333333333326" y="118.88888888888889"/>
         </scene>
+        <!--Photo Info View Controller-->
+        <scene sceneID="Dxd-pt-nXr">
+            <objects>
+                <viewController id="G6M-bG-vNP" customClass="PhotoInfoViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bxF-ae-dX5">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="znH-LJ-F4r">
+                                <rect key="frame" x="9" y="50" width="793" height="1030"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="znH-LJ-F4r" firstAttribute="bottom" secondItem="Qeo-aS-3qw" secondAttribute="bottom" id="021-wX-rpY"/>
+                            <constraint firstItem="znH-LJ-F4r" firstAttribute="leading" secondItem="Qeo-aS-3qw" secondAttribute="leading" constant="9" id="1p3-H4-Ora"/>
+                            <constraint firstItem="Qeo-aS-3qw" firstAttribute="trailing" secondItem="znH-LJ-F4r" secondAttribute="trailing" constant="8" id="Hai-yG-EeB"/>
+                            <constraint firstItem="znH-LJ-F4r" firstAttribute="top" secondItem="Qeo-aS-3qw" secondAttribute="top" id="m4M-FR-U01"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qeo-aS-3qw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0yz-vE-HTk"/>
+                    <connections>
+                        <outlet property="imageView" destination="znH-LJ-F4r" id="NEg-cm-sNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAs-9H-G0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1555.5555555555554" y="118.88888888888889"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jAB-KJ-gMX">
             <objects>
@@ -108,7 +139,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65z-Yc-TOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.85185185185185" y="118.88888888888889"/>
+            <point key="canvasLocation" x="59" y="119"/>
         </scene>
     </scenes>
 </document>
