@@ -29,6 +29,18 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
     
+    func fetchRecentPhotos(completion: @escaping (PhotosResult) -> Void) {
+        let url = FlickrAPI.recentPhotosURL
+        let request = URLRequest(url: url)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            let result = self.processPhotosRequest(data: data, error: error)
+            OperationQueue.main.addOperation {
+                completion(result)
+            }
+        }
+        task.resume()
+    }
+    
     func fetchInterestingPhotos(completion: @escaping (PhotosResult) -> Void) {
         let url = FlickrAPI.interestingPhotosURL
         let request = URLRequest(url: url)
@@ -48,6 +60,11 @@ class PhotoStore {
 //            } else {
 //                print("Unexpected error with the request")
 //            }
+            let httpResponse = (response as! HTTPURLResponse)
+            print("Status Code: \(httpResponse.statusCode)\n")
+            for (key,value) in httpResponse.allHeaderFields {
+                print("\(key) : \(value)\n")
+            }
             let result = self.processPhotosRequest(data: data, error: error)
             OperationQueue.main.addOperation {
                 completion(result)

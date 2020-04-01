@@ -14,6 +14,7 @@ enum FlickrError: Error {
 
 enum Method: String {
     case interestingPhotos = "flickr.interestingness.getList"
+    case recentPhotos = "flickr.photos.getRecent"
 }
 
 struct FlickrAPI {
@@ -30,6 +31,10 @@ struct FlickrAPI {
         return formatter
     }()
     
+    static var recentPhotosURL: URL {
+        return flickrURL(method: .recentPhotos, parameters: ["extras" : "url_h,date_taken"])
+    }
+    
     static var interestingPhotosURL: URL {
         return flickrURL(method: .interestingPhotos, parameters: ["extras" : "url_h,date_taken"])
     }
@@ -42,7 +47,7 @@ struct FlickrAPI {
             "method": method.rawValue,
             "format": "json",
             "nojsoncallback": "l",
-            "date": "2019-03-28",
+            //"date": "2019-03-28",
             "api_key": apiKey
         ]
         
